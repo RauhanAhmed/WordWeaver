@@ -66,10 +66,10 @@ Start the server (Any of the two approaches)
   python manage.py runserver 
     ```
 
-- ```
-  # Start the Uvicorn server (will run on port 7000)
-  python main.py
-  ```
+- ```bash
+  # Start the Uvicorn server (will run on post 7000)
+  python main.py runserver 
+    ```
 
 After performing the above steps, open any browser, and hit the localhost at the correct port.
 ## Authors
