@@ -1,0 +1,82 @@
+# .dockerignore
+
+# Python bytecode files
+__pycache__
+*.pyc
+*.pyo
+
+# Django migrations
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.py
+*/migrations/__pycache__/
+
+# Environment variables
+.env
+*.env
+
+# IDE files
+.idea
+.vscode
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Docker files
+Dockerfile*
+.dockerignore
+
+# Node modules (if using Node.js for frontend)
+node_modules
+
+# Media files
+media
+
+# Test coverage
+.coverage
+htmlcov
+
+# Logs
+*.log
+logs
+
+# Database files
+*.sqlite3
+
+# Built distributions
+dist
+build
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# C extensions
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# Sphinx documentation
+docs/_build
+
+# Coverage reports
+.coverage
+*.cover
+.hypothesis/
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+.env/

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-language Translator</title>
+    <link rel="stylesheet" href="{% static 'translator/styles.css' %}">
+    <style>
+        .redirect-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi-language Translator</h1>
+    <form id="translation-form" method="post" action="{% url 'translate' %}">
+        <textarea name="source_text" id="source_text" placeholder="Enter text to translate"></textarea>
+        <label for="source_language">Select Source Languages:</label>
+        <select name="source_language" id="source_language" multiple>
+            {% for code, name in languages %}
+                <option value="{{ code }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <label for="target_language">Select Target Languages:</label>
+        <select name="target_language" id="target_language" multiple>
+            {% for code, name in languages %}
+                <option value="{{ code }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Translate</button>
+    </form>
+    <div id="translated_text"></div>
+    <div class="button-container">
+        <a href="/analyzer" class="redirect-button" style="margin-top: 85px; margin-right: 20px;">Sentiment Analyzer</a>
+        <a href="/summarizer" class="redirect-button" style="margin-top: 85px; margin-left: 20px;">Text Summarizer</a>
+    </div>
+    <script src="{% static 'translator/scripts.js' %}"></script>
+</body>
+</html>

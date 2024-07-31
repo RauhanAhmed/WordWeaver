@@ -1,0 +1,80 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light grey background color */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark grey color */
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        }
+
+        textarea, select, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none; /* Remove default outline */
+        }
+
+        textarea {
+            resize: vertical; /* Allow vertical resize only */
+            min-height: 100px;
+        }
+
+        select {
+            width: 100%; /* Make select box full width */
+        }
+
+        button {
+            background-color: #007bff; /* Primary blue color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .select2-container--default .select2-selection--multiple {
+            border: 1px solid #ccc; /* Border for select2 */
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #007bff; /* Primary blue for selected items */
+            border: 1px solid #0056b3; /* Darker blue border */
+            color: #fff;
+            border-radius: 2px;
+            padding: 2px 5px;
+            margin: 2px 5px 2px 0;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #fff;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        #translated_text {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }

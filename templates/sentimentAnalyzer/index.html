@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{% static 'sentimentAnalyzer/styles.css' %}">
+</head>
+<style>
+    .redirect-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .redirect-button:hover {
+        background-color: #0056b3;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <h1>Sentiment Analyzer</h1>
+    <form id="analyzerForm" method="post" action="{% url 'analyzer' %}">
+        <textarea name="source_text" id="source_text" placeholder="Enter text to analyze"></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+    <div id="polarity" style="text-align: center;padding: 5px;"></div>
+    <div id="polarityScore" style="text-align: center;padding: 5px;"></div>
+    <div id="subjectivityScore" style="text-align: center;padding: 5px;"></div>
+    <div class="button-container">
+        <a href="/" class="redirect-button" style="margin-top: 85px; margin-right: 20px;">Language Translator</a>
+        <a href="/summarizer" class="redirect-button" style="margin-top: 85px; margin-left: 20px;">Text Summarizer</a>
+    </div>
+    <script src="{% static 'sentimentAnalyzer/scripts.js' %}"></script>
+</body>
+</html>
