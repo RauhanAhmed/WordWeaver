@@ -30,7 +30,7 @@ This repository serves as the foundation for the application, building upon the 
 - *AWS Lambda*: AWS serverless compute service for deploying and running the Dockerized Django application and configuring settings for timeout, memory allocation, and CORS to ensure optimal performance.
 
 
-## Screenshots
+## Demo
 - Web App Demo
 ![App Screenshot](https://i.ibb.co/q9bHVBh/ezgif-1-d988809a22.gif)
 - Multi Language Translator
