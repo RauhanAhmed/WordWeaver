@@ -10,15 +10,19 @@ This repository serves as the foundation for the application, building upon the 
 
 **Multi-Language Translator**
 - *deep-translator:* Python library for translating text in multiple languages, replacing the deprecated googletrans library.
+  
 **Sentimental Analysis** 
 - *TextBlob*: Python library for sentiment analysis, providing polarity and subjectivity scores for input text.
+
 **Text Summarization** 
 - *Langchain*: A framework to build LLM pipelines with language models and integrate them into the application.
 - *Groq Inference Engine*: Used for powering the Llama-3.1-8B LLM variant, enabling the functionality to perform high quality text summarization.
 - *Llama-3.1 (8B)*: A high-performance open-source Large Language Model for text summarization.
+
 **Web Application Development**
 - *Django*: Leveraged the Django framework for building the core web application and managing different components.
 - *HTML, CSS, JavaScript*: For front-end development to enhance the user interface and provide easy navigation across applications.
+
 **Application Deployment** 
 - *Docker*: Containerization tool used for packaging the application with all dependencies for deployment.
 - *Mangum*: A Python library used for adapting the Django ASGI application for AWS Lambda.
